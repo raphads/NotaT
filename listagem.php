@@ -27,7 +27,7 @@ if ($busca != "") {
         <label>Digite o Nome do Funcionário:</label>
         <input type="text" name="busca_nome" value="<?= htmlspecialchars($busca) ?>">
         <input type="submit" value="Filtrar">
-        <a href="listagem.php"><input type="button" value="Voltar"></a>
+        <a href="index.php"><input type="button" value="Voltar"></a>
     </form>
 
     <?php if ($result->num_rows > 0): ?>
@@ -68,8 +68,5 @@ if ($busca != "") {
         <p>Nenhum funcionário encontrado.</p>
     <?php endif; ?>
 
-    <center>
-        <br><a href="home_funcionarios.php">Retornar à Página Inicial</a><br>
-    </center>
 </body>
 </html>

@@ -137,7 +137,7 @@ body,html {
 
 /* PHP info styling */
 pre {margin: 0px; font-family: monospace;}
-a:link {color: #000099; text-decoration: none; background-color: #ffffff;}
+a:link {color: #000099; text-decoration: none; }
 a:hover {text-decoration: underline;}
 table {border-collapse: collapse;}
 .center {text-align: center;}
@@ -155,4 +155,7 @@ h2 {font-size: 125%;}
 .h { background-color: #2D649C; color:white; }
 hr {width: 600px; background-color: #cccccc; border: 0px; height: 1px; color: #000000;}
 
-			
+	img{
+		max-width: 100px;
+		max-height: 100px;
+	}	

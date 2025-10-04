@@ -1,5 +1,4 @@
 *.log
 
 img/
-/yyu6.php
-/excluir.php
+*.txt

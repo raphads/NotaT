@@ -16,8 +16,10 @@ $sal_bruto = $qtde * 1412;
 
 if($sal_bruto > 1550){
     $sal_liquido = $sal_bruto - ( (11 / 100) * $sal_bruto);
+    $inss = (11 / 100) * $sal_bruto;
 }else{
     $sal_liquido = $sal_bruto;
+    $inss = 0;
 }
 if ($result->num_rows > 0) {
     echo "<center>";
@@ -26,8 +28,8 @@ if ($result->num_rows > 0) {
     echo "<hr>";
 	echo "<br>";
 } else {
-      $sql = $conecta_db->prepare("INSERT INTO tb_funcionarios (n_registro,nome_funcionario,data_admissao,cargo,qtde_salarios,salario_bruto,salario_liquido)
-	                     VALUES ('$reg','$nome','$data','$cargo','$qtde','$sal_bruto','$sal_liquido')");
+      $sql = $conecta_db->prepare("INSERT INTO tb_funcionarios (n_registro,nome_funcionario,data_admissao,cargo,qtde_salarios,salario_bruto,inss,salario_liquido)
+	                     VALUES ('$reg','$nome','$data','$cargo','$qtde','$sal_bruto','$inss','$sal_liquido')");
      $sql->execute();
 	        if ($sql->affected_rows > 0) {
             echo "<center>";
