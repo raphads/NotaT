@@ -37,6 +37,7 @@ if ($result->num_rows > 0) {
             echo "Conta Criada com Sucesso";
             echo "<hr>";
             echo "<br>";
+           echo "<a href='listagem.php'>Visualizar Demonstrativos de Pagamentos</a><br>";
         } else {
             echo "<center>";
             echo "<hr>";

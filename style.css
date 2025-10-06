@@ -3,6 +3,13 @@ body,html {
 	padding: 0px;
 	background: #2D649C url('images/background.jpg') repeat-x fixed top;
 	font-size: 25pt;
+	color:white;
+}
+fieldset a:link,a:visited {
+  color: 2D649C;
+  text-decoration: none;
+  display: inline-block;
+background-color: white;
 }
 #container{
 	width: 920px;
@@ -137,8 +144,8 @@ body,html {
 
 /* PHP info styling */
 pre {margin: 0px; font-family: monospace;}
-a:link {color: #000099; text-decoration: none; }
-a:hover {text-decoration: underline;}
+/*a:link {color: #000099; text-decoration: none; }
+a:hover {text-decoration: underline;}*/
 table {border-collapse: collapse;}
 .center {text-align: center;}
 .center table { margin-left: auto; margin-right: auto; text-align: left;}

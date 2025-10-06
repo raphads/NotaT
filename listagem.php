@@ -4,13 +4,13 @@ include 'conexao.php';
 $busca = isset($_POST['busca_nome']) ? trim($_POST['busca_nome']) : "";
 
 if ($busca != "") {
-    $stmt = $conecta_db->prepare("SELECT * FROM tb_funcionarios WHERE nome_funcionario LIKE ? ORDER BY nome_funcionario ASC");
+    $stmt = $conecta_db->prepare("SELECT * FROM tb_funcionarios WHERE nome_funcionario LIKE ? ORDER BY n_registro ASC");
     $busca_param = "%$busca%";
     $stmt->bind_param("s", $busca_param);
     $stmt->execute();
     $result = $stmt->get_result();
 } else {
-    $stmt = $conecta_db->prepare("SELECT * FROM tb_funcionarios ORDER BY nome_funcionario ASC");
+    $stmt = $conecta_db->prepare("SELECT * FROM tb_funcionarios ORDER BY n_registro ASC");
     $stmt->execute();
     $result = $stmt->get_result();
 }
